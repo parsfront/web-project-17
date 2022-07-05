@@ -16,6 +16,7 @@ html {
 }
 
 body {
+    direction: rtl;
     font-family: "vazir";
 }
 
@@ -180,4 +181,218 @@ header .brand-name .logo::before {
     margin: 80px 0;
     flex: 0 0 100%;
     max-width: 100%;
+    display: flex;
+}
+
+.about .about-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-content .about-img {
+    flex: 0 0 calc(33.33% - 15px);
+    max-width: calc(33.33% - 10px);
+}
+
+.about .about-content .about-img img {
+    width: 100%;
+}
+
+.about .about-content .about-description {
+    flex: 0 0 calc(66.66% - 15px);
+    max-width: calc(66.66% - 10px);
+}
+
+.about .about-content .about-description h2 {
+    font-size: 3.8rem;
+}
+
+.about .about-content .about-description h4 {
+    font-size: 2.2rem;
+    margin-top: 10px;
+}
+
+.about .about-content .about-description h4 span {
+    color: #d84315;
+}
+
+.about .about-content .about-description > p {
+    font-size: 1.7rem;
+    margin-top: 25px;
+}
+
+.about .about-content .about-description .info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.about .about-content .about-description .info .info-item {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 15px;
+}
+
+.about .about-content .about-description .info .info-item label {
+    font-size: 1.5rem;
+}
+
+.about .about-content .about-description .info .info-item p {
+    font-size: 1.5rem;
+    color: #979797;
+    margin-right: 10px;
+}
+
+.about .about-content .about-description .social {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    margin-top: 40px;
+}
+
+.about .about-content .about-description .social ul {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-description .social ul li {
+    margin-left: 10px;
+}
+
+.about .about-content .about-description .social ul li a svg {
+    color: #fff;
+    background: #000;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* services */
+
+.services {
+    background: #f1f1f1;
+    padding: 120px 0;
+}
+
+.services .service-item {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    padding: 3rem;
+    text-align: center;
+    background: #fff;
+    margin-top: 30px;
+    position: relative;
+}
+
+.services .service-item::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #d84315;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    left: 0;
+}
+
+.services .service-item .icon svg {
+    background: #d84315;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    color: #fff;
+}
+
+.services .service-item h4 {
+    font-size: 1.6rem;
+    padding: 10px 0;
+}
+
+.services .service-item p {
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: rgb(73, 73, 73);
+    margin-top: 15px;
+}
+
+/* skill */
+
+.skill {
+    padding: 120px 0;
+    width: 100%;
+}
+
+.skill .skill-description {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+}
+
+.skill .skill-description .progress-bar {
+    margin-top: 50px;
+}
+
+.skill .skill-description .progress-bar .skill-progress {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skill .skill-description .progress-bar .skill-progress h3 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.skill .skill-description .progress-bar .skill-progress .skill-box {
+    width: 100%;
+    height: 5px;
+    background: #d8d8d8;
+    position: relative;
+}
+
+.skill .skill-description .progress-bar .skill-progress .skill-box .skill-bar {
+    background: #d84315;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.skill .skill-description .progress-bar .skill-progress .skill-box .skill-bar span {
+    position: absolute;
+    top: -20px;
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.skill .skill-img {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.skill .skill-img img {
+    width: 80%;
 }
