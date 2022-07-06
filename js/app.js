@@ -24,7 +24,65 @@ for (let i = 0; i < tabMenu.length; i++) {
 // lightbox
 
 const closeLightbox = document.querySelector(".close-lightbox");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = lightbox.querySelector("img");
+
+lightbox.addEventListener("click", function () {
+    if (event.target != lightboxImage) {
+        lightbox.classList.remove("show");
+        lightbox.classList.add("hide");
+    }
+});
 
 closeLightbox.addEventListener("click", function () {
-    document.querySelector(".lightbox").style.display = "none";
+    lightbox.classList.add("hide");
+    lightbox.classList.remove("show");
 });
+
+const gallery = document.querySelector(".portfolio-gallery");
+const galleryItem = gallery.querySelectorAll(".item");
+
+galleryItem.forEach((element) => {
+    element.querySelector("span").addEventListener("click", function () {
+        lightbox.classList.add("show");
+        lightbox.classList.remove("hide");
+        lightboxImage.src = element.querySelector("img").getAttribute("src");
+    });
+});
+
+// customer-slider
+
+let itemsSlider = document.querySelector(".cusotmer-slider").children;
+let nextSlide = document.querySelector(".next");
+let prevSlide = document.querySelector(".prev");
+let totalItems = itemsSlider.length;
+let index = 0;
+
+nextSlide.onclick = function () {
+    next("next");
+};
+
+prevSlide.onclick = function () {
+    next("prev");
+};
+
+function next(direction) {
+    if (direction == "next") {
+        index++;
+        if (index == totalItems) {
+            index = 0;
+        }
+    } else {
+        if (index == 0) {
+            index = totalItems - 1;
+        } else {
+            index--;
+        }
+    }
+
+    for (let i = 0; i < itemsSlider.length; i++) {
+        itemsSlider[i].classList.remove("active");
+    }
+
+    itemsSlider[index].classList.add("active");
+}

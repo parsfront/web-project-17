@@ -402,6 +402,7 @@ header .brand-name .logo::before {
 .postfolio {
     padding: 120px 0;
     background: #f8f8f8;
+    display: flex;
 }
 
 .postfolio .tab-menu {
@@ -436,6 +437,7 @@ header .brand-name .logo::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 650px;
 }
 
 .postfolio .portfolio-gallery .item {
@@ -532,10 +534,18 @@ header .brand-name .logo::before {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
 }
 
 .lightbox span {
@@ -554,4 +564,191 @@ header .brand-name .logo::before {
 
 .lightbox span svg {
     font-size: 20px;
+}
+
+/* message */
+
+.message-box {
+    width: 100%;
+    background: url("../images/bg-message.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-box .message-description {
+    color: #fff;
+    font-size: 2rem;
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.message-box .message-link {
+    color: #fff;
+    font-size: 1.7rem;
+    flex: 0 0 30%;
+    max-width: 30%;
+    text-align: center;
+}
+
+.message-box .message-link a {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 7px 10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.message-box .message-link a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* customer */
+
+.customer {
+    width: 100%;
+    background: url("../images/bg-customer-two.svg");
+    background-size: cover;
+    padding: 120px 0;
+    background-position: center;
+}
+
+.customer .title {
+    color: #fff;
+}
+
+.customer .cusotmer-slider {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 100px;
+}
+
+.customer .cusotmer-slider .customer-item {
+    flex: 0 0 30%;
+    max-width: 30%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.customer .cusotmer-slider .customer-item.active {
+    display: flex;
+}
+
+.customer .cusotmer-slider .customer-item .caption {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.customer .cusotmer-slider .customer-item .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.customer .cusotmer-slider .customer-item .img img {
+    width: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.customer .cusotmer-slider .customer-item .img h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+
+.customer .cusotmer-slider .customer-item .img h6 {
+    color: rgb(231, 231, 231);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.customer .container {
+    position: relative;
+}
+
+.customer .controls {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+}
+
+.customer .controls .prev {
+    left: 0;
+    position: absolute;
+}
+
+.customer .controls .prev svg,
+.customer .controls .next svg {
+    font-size: 3.5rem;
+    color: #d84315;
+    cursor: pointer;
+}
+
+/* blogs */
+.blogs {
+    width: 100%;
+    padding: 120px 0;
+    background: #f8f8f8;
+}
+
+.blogs .blog-content {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    background: #fff;
+}
+
+.blogs .blog-content img {
+    width: 100%;
+    height: 300px;
+}
+
+.blogs .blog-content .blog-description {
+    padding: 1rem;
+}
+
+.blogs .blog-content .blog-description h2 {
+    font-size: 1.7rem;
+}
+
+.blogs .blog-content .blog-description .blog-info {
+    margin: 8px 0;
+    color: #6e6e6e;
+}
+
+.blogs .blog-content .blog-description .blog-info span {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.blogs .blog-content .blog-description .blog-info span svg {
+    margin-left: 0.5rem;
+}
+
+.blogs .blog-content .blog-description p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.blogs .blog-content .blog-description a {
+    color: #d84315;
+    border-bottom: 1px solid #d84315;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding-bottom: 7px;
 }
