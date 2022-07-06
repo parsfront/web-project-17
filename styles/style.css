@@ -220,7 +220,7 @@ header .brand-name .logo::before {
     color: #d84315;
 }
 
-.about .about-content .about-description>p {
+.about .about-content .about-description > p {
     font-size: 1.7rem;
     margin-top: 25px;
 }
@@ -442,6 +442,7 @@ header .brand-name .logo::before {
     flex: 0 0 calc(33.33% - 20px);
     max-width: calc(33.33% - 20px);
     margin-top: 30px;
+    height: 300px;
 }
 
 .postfolio .portfolio-gallery .item .inner {
@@ -520,4 +521,37 @@ header .brand-name .logo::before {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
+}
+
+/* lightbox */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.lightbox span {
+    position: absolute;
+    color: #fff;
+    left: 20px;
+    top: 20px;
+    width: 40px !important;
+    height: 40px;
+    background: #d84315;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox span svg {
+    font-size: 20px;
 }
