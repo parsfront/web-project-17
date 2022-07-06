@@ -86,3 +86,30 @@ function next(direction) {
 
     itemsSlider[index].classList.add("active");
 }
+
+// header fix
+
+window.onscroll = function () {
+    const scrollTopFix = document.documentElement.scrollTop;
+    if (window.innerWidth > 991) {
+        if (scrollTopFix > 100) {
+            document.querySelector("header").classList.add("fixed");
+        } else {
+            document.querySelector("header").classList.remove("fixed");
+        }
+    }
+};
+
+// add active in smooth
+
+const navbar = document.querySelector(".navbar");
+const a = navbar.querySelectorAll("a");
+console.log(a);
+a.forEach(function (element) {
+    element.addEventListener("click", function () {
+        for (let i = 0; i < a.length; i++) {
+            a[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    });
+});

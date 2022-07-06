@@ -16,12 +16,12 @@
       <div class="row align-items">
         <div class="navbar">
           <ul>
-            <li><a href="" class="active">صفحه نخست</a></li>
-            <li><a href="">درباره ما</a></li>
-            <li><a href="">خدمات</a></li>
-            <li><a href="">نمونه کارها</a></li>
-            <li><a href="">بلاگ</a></li>
-            <li><a href="">تماس با ما</a></li>
+            <li><a href="#home" class="active">صفحه نخست</a></li>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#services">خدمات</a></li>
+            <li><a href="#portfolio">نمونه کارها</a></li>
+            <li><a href="#blogs">بلاگ</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
           </ul>
         </div>
         <div class="brand-name">
@@ -31,8 +31,8 @@
     </div>
   </header>
 
-
-  <section class="home">
+  <!--Home-->
+  <section id="home" class="home">
     <div class="container">
       <div class="row">
         <div class="home-content">
@@ -47,12 +47,12 @@
     </div>
   </section>
 
-
-  <section class="about">
+  <!--About-->
+  <section id="about" class="about">
     <div class="container">
       <div class="row">
         <div class="title">
-          <h2>درباره ما</h2>
+          <h2>درباره من</h2>
           <p>این بخش در مورد من است و توضیحات و تخصص های من است.</p>
         </div>
       </div>
@@ -106,7 +106,8 @@
     </div>
   </section>
 
-  <section class="services">
+  <!--Services-->
+  <section id="services" class="services">
     <div class="container">
       <div class="row">
         <div class="title">
@@ -173,7 +174,8 @@
     </div>
   </section>
 
-  <section class="skill">
+  <!--Skill-->
+  <section id="skill" class="skill">
     <div class="container">
       <div class="row align-items">
         <div class="skill-description">
@@ -215,6 +217,14 @@
                 </div>
               </div>
             </div>
+            <div class="skill-progress">
+              <h3>Wordpress</h3>
+              <div class="skill-box">
+                <div class="skill-bar" style="width: 75%;">
+                  <span>75%</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="skill-img">
@@ -224,7 +234,8 @@
     </div>
   </section>
 
-  <section class="postfolio">
+  <!--Portfolio-->
+  <section id="portfolio" class="postfolio">
     <div class="container">
       <div class="row">
         <div class="title">
@@ -317,6 +328,7 @@
     </div>
   </section>
 
+  <!--Message-box-->
   <section class="message-box">
     <div class="container">
       <div class="row align-items mt-5">
@@ -332,7 +344,8 @@
     </div>
   </section>
 
-  <section class="customer">
+  <!--Customer-->
+  <section id="customer" class="customer">
     <div class="container">
       <div class="row">
         <div class="title">
@@ -382,7 +395,6 @@
         </div>
       </div>
 
-
       <div class="controls">
         <div class="prev">
           <i class="fas fa-chevron-left"></i>
@@ -391,10 +403,13 @@
           <i class="fas fa-chevron-right"></i>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="blogs">
+
+  <!--Blogs-->
+  <section id="blogs" class="blogs">
     <div class="container">
       <div class="row">
         <div class="title">
@@ -462,7 +477,55 @@
     </div>
   </section>
 
-  <div class="lightbox">
+  <!--Contact-->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="title">
+          <h2>تماس با ما</h2>
+          <p>این بخش در مورد من است و توضیحات و تخصص های من است.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <form>
+          <div class="input-group">
+            <input type="text" placeholder="نام و نام خانوادگی">
+            <input type="text" placeholder="ایمیل">
+            <input type="text" placeholder="موضوع">
+          </div>
+          <textarea placeholder="چیزی بنویسید.."></textarea>
+          <input type="submit" value="ارسال">
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-about">
+          <h3>درباره ما</h3>
+          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+        </div>
+      </div>
+      <div class="row">
+        <ul>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div class="copy-right">
+        <p>تمامی حقوق برای من محفوظ است و هر گونه کپی برداری نامردی است.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="lightbox hide">
     <span class="close-lightbox">
       <i class=" fas fa-times"></i>
     </span>
