@@ -100,14 +100,37 @@ header {
 
 header .navbar {
     display: flex;
+    align-items: center;
+    height: 8vh;
 }
 
 header .navbar ul {
-    display: flex;
+    display: block;
+    position: absolute;
+    background: #222;
+    width: 100%;
+    right: 0;
+    top: 8vh;
+    z-index: 1;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+header .navbar ul.show {
+    visibility: visible;
+    opacity: 1;
 }
 
 header .navbar ul li {
     margin-left: 35px;
+    width: 220px;
+    margin: auto;
 }
 
 header .navbar ul li a {
@@ -124,6 +147,7 @@ header .navbar ul li a.active::before {
     position: absolute;
     bottom: 0;
     width: 100%;
+    right: 0;
     height: 3px;
     background: #fff;
 }
@@ -191,6 +215,7 @@ header .brand-name .logo::before {
     height: 100vh;
     width: 100%;
     display: flex;
+    background-position: center;
 }
 
 .home .home-content {
@@ -220,7 +245,7 @@ header .brand-name .logo::before {
 }
 
 .home .home-content h1 {
-    font-size: 7rem;
+    font-size: 3rem;
     color: #fff;
     margin: 10px 0;
 }
@@ -262,6 +287,7 @@ header .brand-name .logo::before {
 .about .about-content .about-img {
     flex: 0 0 calc(33.33% - 15px);
     max-width: calc(33.33% - 10px);
+    display: none;
 }
 
 .about .about-content .about-img img {
@@ -269,8 +295,8 @@ header .brand-name .logo::before {
 }
 
 .about .about-content .about-description {
-    flex: 0 0 calc(66.66% - 15px);
-    max-width: calc(66.66% - 10px);
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
 }
 
 .about .about-content .about-description h2 {
@@ -301,8 +327,8 @@ header .brand-name .logo::before {
 }
 
 .about .about-content .about-description .info .info-item {
-    flex: 0 0 calc(50% - 15px);
-    max-width: calc(50% - 15px);
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -360,8 +386,8 @@ header .brand-name .logo::before {
 }
 
 .services .service-item {
-    flex: 0 0 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
     padding: 3rem;
     text-align: center;
     background: #fff;
@@ -415,8 +441,8 @@ header .brand-name .logo::before {
 }
 
 .skill .skill-description {
-    flex: 0 0 calc(50% - 30px);
-    max-width: calc(50% - 30px);
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
 }
 
 .skill .skill-description .progress-bar {
@@ -457,7 +483,7 @@ header .brand-name .logo::before {
 .skill .skill-img {
     flex: 0 0 calc(50% - 30px);
     max-width: calc(50% - 30px);
-    display: flex;
+    display: none;
     justify-content: flex-end;
 }
 
@@ -505,12 +531,12 @@ header .brand-name .logo::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 650px;
+    height: auto;
 }
 
 .postfolio .portfolio-gallery .item {
-    flex: 0 0 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
     margin-top: 30px;
     height: 300px;
 }
@@ -634,6 +660,11 @@ header .brand-name .logo::before {
     font-size: 20px;
 }
 
+.lightbox img {
+    width: 80%;
+    height: 350px;
+}
+
 /* message */
 
 .message-box {
@@ -700,8 +731,8 @@ header .brand-name .logo::before {
 }
 
 .customer .cusotmer-slider .customer-item {
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 100%;
+    max-width: 100%;
     display: none;
     align-items: center;
     flex-direction: column;
@@ -777,7 +808,7 @@ header .brand-name .logo::before {
 .customer .controls {
     position: absolute;
     top: 65%;
-    width: 100%;
+    width: 95%;
 }
 
 .customer .controls .prev {
@@ -800,10 +831,11 @@ header .brand-name .logo::before {
 }
 
 .blogs .blog-content {
-    flex: 0 0 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
     background: #fff;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .blogs .blog-content img {
@@ -874,15 +906,17 @@ header .brand-name .logo::before {
 
 .contact form .input-group {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
 .contact form .input-group input {
-    width: calc(33.33% - 20px);
+    width: calc(100%);
     padding: 10px 5px;
     border: 1px solid #e4e4e4;
     font-size: 1.5rem;
+    margin-top: 20px;
 }
 
 .contact form textarea {
@@ -972,4 +1006,78 @@ header .brand-name .logo::before {
     text-align: center;
     padding: 20px;
     border-top: 1px solid #b4b4b4;
+}
+
+/* hamburger */
+
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background: black;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.hamburger-menu div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active div {
+    background: transparent;
+}
+
+.hamburger-menu.active div::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.hamburger-menu.active div::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
